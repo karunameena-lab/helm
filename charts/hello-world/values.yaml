@@ -5,11 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: 313234541918.dkr.ecr.us-east-1.amazonaws.com/eksdeploy
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
-
+  tag: "#{codepipeline.PipelineExecutionId}"
 nameOverride: ""
 fullnameOverride: ""
 
